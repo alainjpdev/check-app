@@ -2,7 +2,7 @@
   "name": "14-sep-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://alainjpdev.github.io/14-sep-app",
+  "homepage": "https://alainjpdev.github.io/14-sep-app/", 
   "dependencies": {
     "'": "file:mui/icons-material/KeyboardArrowLeft'",
     "@emotion/react": "^11.10.4",
