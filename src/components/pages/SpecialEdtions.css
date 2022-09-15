@@ -1,0 +1,134 @@
+.img {
+    width: 300px;
+    padding: 20px;
+}
+
+.image-container{
+    text-align: center;
+}
+
+/* .movies-image-container{
+    width: 80%;
+} */
+
+.img-movie{
+    width: 100%;
+}
+
+.strong{
+    font-weight: 1000;
+    font-size: 1.6rem;
+}
+
+.text-container {
+    text-align:justify;
+    padding: 20px;
+    /* max-width: 500px; */
+    justify-content: center;
+    color: #1e243c;
+    line-height: 1.6;
+    font-family: "PT Serif"!important;
+    font-size: 22px;
+    text-align: center;
+}
+
+.videoWrapper{
+    padding: 20px;
+}
+h3{
+    font-family: Futura, Montserrat, sans-serif;
+    font-size: .8rem; 
+}
+h2{
+    font-family: Futura, Montserrat, sans-serif;
+    font-size: 22px; 
+}
+
+p{
+    font-size: .7rem;
+}
+.title{
+    text-align:justify;
+    padding: 20px;
+    /* max-width: 500px; */
+    justify-content: center;
+    color: #1e243c;
+    line-height: 1.6;
+    font-family: "PT Serif"!important;
+    font-size: 22px;
+    text-align: center;
+
+}
+.container-se{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 30px;
+    /* background-color: blue; */
+   
+}
+li{
+    list-style-type:none;
+    font-size: 1rem;
+}
+.add-cart-container{
+    background-color: rgb(200, 197, 197);
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px;
+}
+.img-movie{
+    width: 100%;
+   
+    padding: 10px;
+}
+/* .container-se div{
+    background-color: aqua;
+    margin: 10px;
+} */
+.movies-image-container{
+display: grid;
+grid-template-columns: 100% 100%;
+max-width: 100%;
+padding: 20px;
+
+}
+.img-small{
+    width: 15%;
+    justify-content: center;
+}
+.btn-add-cart-007{
+    background-color: black;
+    color: white;
+    padding: 1rem 1rem 1rem 1rem;
+    margin-top: 20px;
+    margin: 25px;
+    cursor: pointer;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: Montserrat, sans-serif;
+  }
+  .btn-add-cart-007:hover{
+    background-color: rgb(67, 67, 67);
+   
+  }
+
+@media screen and (max-width: 700px) {
+    .container-se{
+        display: grid;
+        grid-template-columns:  100%;
+        /* background-color: red; */
+    }
+    .img-movie{
+        width: 100%;
+    }
+    .movies-image-container{
+        display: grid;
+        grid-template-columns: 100%;
+        max-width: 100%;
+        padding: 20px;
+        }
+    
+
+}

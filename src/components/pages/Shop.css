@@ -1,0 +1,19 @@
+
+
+
+.section-title{
+
+    font-family: Montserrat, sans-serif;
+    box-shadow: black;
+    letter-spacing: 2px;
+    word-spacing:0px;
+    font-size: .6rem;
+    margin-left: 10px;
+    font-weight:700;
+    margin-bottom: 20px;
+}
+
+.red{
+    background-color: red;
+}
+
