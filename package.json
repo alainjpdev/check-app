@@ -1,8 +1,8 @@
 {
-  "name": "deploy-test",
+  "name": "deploy-test-app",
   "version": "0.1.0",
   "private": true,
-
+  "homepage": "http://alainjpdev.github.io/deploy-test-app",
   "dependencies": {
     "'": "file:mui/icons-material/KeyboardArrowLeft'",
     "@emotion/react": "^11.10.4",
@@ -27,7 +27,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
- 
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build", 
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
