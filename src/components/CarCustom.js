@@ -288,7 +288,7 @@ function CarCustom(setIsLoggedIn) {
      /> ALL WEATHER CAR COVER + $650.00
      </div>
 
-     <div className="btn-add-cart" onClick={shopAction}>ADD TO CART</div>
+     <div className="btn-add-cart" onClick={shopAction}><a href='/cart' >ADD TO CARTO</a></div>
 
      {/* <Link to={"/cart"} onClick={shopAction} >ADD TO CART</Link> */}
              
