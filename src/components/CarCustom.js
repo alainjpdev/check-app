@@ -112,11 +112,12 @@ function CarCustom(setIsLoggedIn) {
 
       <div className="container-image">
     
-    <Car body={body} grill={grill} />
-
+          <Car 
+          body={body} 
+          grill={grill} 
+          rollbar={rollbar} 
+          bumper={ bumper }/>
   
- 
-   
       </div>
       
       <div className="border-colors">

@@ -1,8 +1,8 @@
 {
-  "name": "14-sep-app",
+  "name": "check-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://alainjpdev.github.io/14-sep-app/",
+  "homepage": "https://alainjpdev.github.io/check-app/",
   "dependencies": {
     "'": "file:mui/icons-material/KeyboardArrowLeft'",
     "@emotion/react": "^11.10.4",

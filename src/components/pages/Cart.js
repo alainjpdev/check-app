@@ -74,7 +74,7 @@ useEffect(() =>{
         TOTAL: <strong>$35,000.00</strong> 
        </div>
        </div>
-       <div className="btn-add-cart" >CHECK OUT</div>
+       <div className="btn-add-cart"><a href='https://buy.stripe.com/cN27ubaPM5WKgJa288'> CHECK OUT</a></div>
         
 
 
