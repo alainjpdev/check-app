@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { Link } from "react-router-dom"
 // import { Button } from "./Button.js"
+import logo from "../Car-Images/moke-tulum.png"
 
 import "./Navbar.css"
 function Navbar() {
@@ -28,7 +29,7 @@ function Navbar() {
     <>
      <nav className="navbar">
       <div className="navbar-container">
-        <Link to="/"> <img src="/images/moke-tulum.png" alt="bug" height={80} to="/"/></Link>
+        <Link to="/"> <img src={logo} alt="logo-moke" height={80} to="/" key={"logo-moke"}/></Link>
      
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
         

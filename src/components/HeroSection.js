@@ -2,6 +2,14 @@ import React from 'react'
 import "../App.css"
 import "./HeroSection.css"
 import { Link } from "react-router-dom"
+import redMoke from "../images/1.1.png"
+import militarMoke from "../images/2.png"
+import rainbowMoke from "../images/3.png"
+import yellowMoke from "../images/4.png"
+import otherMoke from "../images/5.png"
+import videoAd from "../videos/ma.mp4"
+
+
 
 
 
@@ -14,7 +22,7 @@ function HeroSection(props) {
     <div className='hero-container'>
      
 
-      <img src="/images/1.1.png" alt="bug" width={500} to="/" className='responsive-car'/>
+      <img src={ redMoke} alt="red-moke" width={500} to="/" className='responsive-car'key={"car1"}/>
  
       <div className="top-left">
         <h4>TAKE IT FOR A SPIN!</h4>
@@ -39,17 +47,17 @@ function HeroSection(props) {
       </div>
       
       <div className="image-militar-container">
-      <img src="/images/2.png" alt="militar" className='responsive'></img>
+      <img src={ militarMoke} alt="militar" className='responsive'></img>
      
       {/* <Link to="/"><div className="botton-left">CUSTOMIZE</div></Link>
        <Route path="/shop" exact component={Shop}/> */}
       
       </div>
-      <img src="/images/3.png" alt="rainbow" className='responsive'></img>
-      <img src="/images/4.png" alt="rainbow" className="responsive"></img>
-      <img src="/images/5.png" alt="rainbow" className="responsive"></img>
+      <img src={ rainbowMoke } alt="rain-Moke" className='responsive'></img>
+      <img src={ yellowMoke} alt="yellow-Moke" className="responsive"></img>
+      <img src={otherMoke} alt="rainbow" className="responsive"></img>
       <div className="videoWrapper">
-      <video src='/videos/ma.mp4' width="100%"autoPlay loop muted controls/>
+      <video src={videoAd} width="100%"autoPlay loop muted controls/>
       </div>
     
     

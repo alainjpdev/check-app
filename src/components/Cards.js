@@ -1,6 +1,9 @@
 import React from 'react';
 import './Cards.css';
 import CardItem from './CardItem';
+import kardashianNews from "../images/news/kardashians.webp"
+import jimmy from "../images/jimmy.png"
+import f1 from "../images/f1.png"
 
 function Cards() {
   return (
@@ -12,7 +15,7 @@ function Cards() {
         <div className='cards__wrapper'>
           <ul className='cards__items'>
           <CardItem
-              src='images/news/kardashians.webp'
+              src={ kardashianNews }
               text_title="Posted on Dec 28, 2021"
               text="FROM PEOPLE MAGAZINE
               
@@ -33,7 +36,7 @@ function Cards() {
               path='/services'
             />
             <CardItem
-              src='images/jimmy.png'
+              src={ jimmy }
               text_title="Posted on Aug 09, 2022"
               text="Tonight Show host Jimmy Fallon was spotted checking out our custom-wrapped Moke cruiser 
               behind the new Valentino store in East Hampton. 
@@ -42,7 +45,7 @@ function Cards() {
               path='/services'
             />
             <CardItem
-              src='images/f1.png'
+              src={ f1 }
               alt="Jimmy F"
               text_title="Posted on May 09, 2022"
               text="F1 MIAMI WINNER MAX VERSTAPPEN MADE HIS VICTORY LAP IN AN ELECTRIC MINI MOKE FROM MOKE 

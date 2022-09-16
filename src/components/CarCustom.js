@@ -1,9 +1,11 @@
 
 import { StyleTwoTone } from '@mui/icons-material';
+import { color } from '@mui/system';
 import React, { useState } from 'react'
 
 
 import { ColorsData } from './BodyColors';
+import Car from './Car';
 import "./CarCustom.css"
 import Charger from './Charger';
 import Cover from './Cover';
@@ -28,7 +30,7 @@ function CarCustom(setIsLoggedIn) {
      const afterClickBody = (e) =>{
     setBody(e.target.id)
     arrBody.push(e.target.id)
-    //  console.log(arrBody)
+     console.log(arrBody)
     }
 
     const afterClickGrill = (e) =>{    
@@ -109,20 +111,11 @@ function CarCustom(setIsLoggedIn) {
   <div className="container">
 
       <div className="container-image">
-      <> 
-    <div className="default-car-container">        
-        <img className="image2" src="./images/moke pics/body/b-base.png" width={"300px"} alt="Something"key={0}/>
-        <img className="image2" src={`./images/moke pics/grill/g-${grill}.png`} width={"300px"} alt="Something"key={1}/>
-        <img className="image2" src={`./images/moke pics/body/b-${body}.png`} width={"300px"} alt="Something"key={3}/>
-        <img className="image2" src={`./images/moke pics/roll/r-${rollbar}.png`} width={"300px"} alt="Something"key={4}/>
-        <img className="image2" src={`./images/moke pics/bumper/p-${bumper}.png`} width={"300px"} alt="Something"key={5}/>
-        <img className="image2" src="./images/moke pics/seat/s-test.png" width={"300px"} alt="Something"key={6}/>
-        <img className="image2" src="./images/moke pics/wheel/w-black.png" width={"300px"} alt="Something"key={7}/>
-       
-       
-    </div>
+    
+    <Car body={body} grill={grill} />
 
-    </>
+  
+ 
    
       </div>
       
