@@ -2,6 +2,7 @@
 import { StyleTwoTone } from '@mui/icons-material';
 import { color } from '@mui/system';
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 
 import { ColorsData } from './BodyColors';
@@ -288,9 +289,12 @@ function CarCustom(setIsLoggedIn) {
      /> ALL WEATHER CAR COVER + $650.00
      </div>
 
-     <div className="btn-add-cart" onClick={shopAction}><a href='/cart' >ADD TO CARTO</a></div>
+     {/* <div className="btn-add-cart" onClick={shopAction}>
+      <Link to="/cart" className='redButton'></Link>ADD TO CARTO LINK</div> */}
 
-     {/* <Link to={"/cart"} onClick={shopAction} >ADD TO CART</Link> */}
+      {/* <div className="btn-add-cart" > */}
+      <Link to="/cart" className='redButton' onClick={shopAction}>ADD TO CARTO LINK</Link>
+      {/* </div> */}
              
 
   </div>
