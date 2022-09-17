@@ -1,9 +1,9 @@
 import React from 'react';
-// import '../../App.css';
-import SwipeableTextMobileStepper from '../SwipeableTextMobileStepper';
-
 import "./SpecialEdtions.css"
-// import ColorPallete from '../ColorPallete';
+
+import specialImg from "./mediaPages/60.png"
+import videoSpecial from "./mediaPages/Moke_60_Anniversary_16x9_video.mp4"
+ 
 
 export default function SpecialEditions() {
 
@@ -12,7 +12,7 @@ export default function SpecialEditions() {
   <p>Home  >>  Cars  >>  60 Years of Bond Moke Edition 2022</p>
   </div>
     <div className="image-container">
-    <img src='./images/specialEditions/60.png' 
+    <img src={specialImg} 
     className='img' alt='cualquier cosa'/>
     <div className='strong'> <strong>YEARS OF BOND</strong> </div>
     </div>
@@ -20,14 +20,12 @@ export default function SpecialEditions() {
     <h3 className='text-container'>Inspired by 60 years of James Bond, this limited edition Moke pays homage to 007’s iconic history. Discover this
        thrilling new ride, our second collaboration with 007.</h3>
        <div className="videoWrapper">
-      <video src='/videos/Moke_60_Anniversary_16x9_video.mp4' width="100%"autoPlay loop muted controls/>
+      <video src={videoSpecial} width="100%"autoPlay loop muted controls/>
       </div>
 
       <h3 className='text-container'>Celebrate 60 years of James Bond movies! Moke America`s latest collaboration with EON Productions and 007 is a love letter to the James Bond film canon. The Moke has appeared in four 007 films: You Only Live Twice (1967), Live And Let Die (1973), The Spy Who Loved Me (1977) and Moonraker (1979). This limited edition 007 Moke features a midnight blue exterior, “Mango Tree” wooden dashboard, 
       sequence dots tire cover, wood steering wheel, wood gear shift knob and many more unique options.</h3>
-      <div className="image-slider">
-          <SwipeableTextMobileStepper/>
-      </div>
+ 
       <div className="container-se">
           <div className="features">
               <h2>Features</h2>
@@ -57,7 +55,7 @@ export default function SpecialEditions() {
                       </ul> 
           </div>
           <div className="add-cart-container">
-          <img src='./images/specialEditions/60.png' 
+          <img src={specialImg} 
     className='img-small' alt='cualquier cosa'/>
     <br/>
             <h2><strong>Years of Bond Moke</strong> </h2>

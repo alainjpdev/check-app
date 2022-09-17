@@ -1,15 +1,18 @@
 import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
+
 import Car from '../Car';
 import "./Cart.css";
 
 function Cart(lastBody) {
 
+
   const [ carrito, setCarrito ] = useState("")
 
   const carritoArr = carrito.split(",")
-console.log(carritoArr)
+// console.log(carritoArr)
 const body = carritoArr[0]
 const grill = carritoArr[1]
 const rollbar = carritoArr[2]

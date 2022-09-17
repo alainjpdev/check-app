@@ -25,6 +25,7 @@ const arrBumper = ["bumper black"];
 const arrRollbar = ["rollbar black"];
 const arrBody = ["body black"];
 const arrGrill = ["grill black"];
+const arrShopping = [];
 
 function CarCustom(setIsLoggedIn) {
 
@@ -65,8 +66,12 @@ function CarCustom(setIsLoggedIn) {
         const lastGrill = arrGrill[arrGrill.length-1]
         const lastRollbar = arrRollbar[arrRollbar.length-1]
         const lastBumper = arrBumper[arrBumper.length-1]
-        setShopCart([lastBody,lastGrill, lastRollbar, lastBumper, rim,seat,top,steering,stereo,charger,cover])    
-        localStorage.setItem("carrito", [shopCart])
+        
+        setShopCart([lastBody,lastGrill, lastRollbar, lastBumper, rim,seat,top,steering,stereo,charger,cover])  
+
+        arrShopping.push(lastBody,lastGrill,lastRollbar,lastBumper,rim,seat,top,steering,stereo,charger,cover) 
+        localStorage.setItem("carrito", arrShopping)
+     
 
         
         console.log(shopCart)    
@@ -183,6 +188,7 @@ function CarCustom(setIsLoggedIn) {
                                        
                                         onClick={afterClickBody}
                                         style={{background : color.background}}>
+                                      
                                       </div>
                                   <p>{color.color}</p>
                                 </div>  
@@ -292,8 +298,8 @@ function CarCustom(setIsLoggedIn) {
      {/* <div className="btn-add-cart" onClick={shopAction}>
       <Link to="/cart" className='redButton'></Link>ADD TO CARTO LINK</div> */}
 
-      {/* <div className="btn-add-cart" > */}
-      <Link to="/cart" className='redButton' onClick={shopAction}>ADD TO CARTO LINK</Link>
+      {/* <div className="" > */}
+      <Link to="/cart" className='btn-add-cart' onClick={shopAction}>ADD TO CART</Link>
       {/* </div> */}
              
 

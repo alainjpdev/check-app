@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import CarCustom from '../CarCustom';
 import Cart from './Cart';
 import "./Shop.css";
 
+
 export default function Shop() {
+
 
   const [isLoggedIn, setIsLoggedIn ] = useState(true)
 

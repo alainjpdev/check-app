@@ -92,7 +92,7 @@
 .container-moke .card-moke {
   /* background-color: purple; */
   width: 125px;
-  padding: 3px; 
+  padding: 2px; 
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -115,8 +115,8 @@
 }
 
 .container-moke .card-moke .box-moke {
-  width: 2rem;
-  height: 2rem;
+  width: 1.7rem;
+  height: 1.7rem;
   border-radius: 50%;
   cursor: pointer;
   border: .1px solid black;
