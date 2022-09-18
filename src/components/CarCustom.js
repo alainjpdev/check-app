@@ -20,10 +20,10 @@ import Tops from './Tops';
 
 import storeItems from "./data/items.json"
 
-const arrBumper = ["bumper black"];
-const arrRollbar = ["rollbar black"];
-const arrBody = ["body black"];
-const arrGrill = ["grill black"];
+const arrBumper = ["black"];
+const arrRollbar = ["black"];
+const arrBody = ["black"];
+const arrGrill = ["black"];
 const arrShopping = [];
 
 function CarCustom(setIsLoggedIn) {
@@ -31,7 +31,7 @@ function CarCustom(setIsLoggedIn) {
      const afterClickBody = (e) =>{
     setBody(e.target.id)
     arrBody.push(e.target.id)
-     console.log(arrBody)
+    //  console.log(arrBody)
     }
 
     const afterClickGrill = (e) =>{    
@@ -90,7 +90,7 @@ function CarCustom(setIsLoggedIn) {
         arrShopping.length = 0
         arrShopping.push(lastBody,lastGrill,lastRollbar,lastBumper,rim,seat,top,steering,stereo,charger,cover) 
         localStorage.setItem("carrito", arrShopping)
-     
+       
 
         
         // console.log(shopCart)    
@@ -117,7 +117,7 @@ function CarCustom(setIsLoggedIn) {
 
     const [ steering, setSteering ] = useState("")
     
-    const [ stereo, setStereo ] = useState("") 
+    const [ stereo, setStereo ] = useState(Boolean) 
 
     const [ charger, setCharger ] = useState(Boolean)
 

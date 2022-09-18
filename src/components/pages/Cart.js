@@ -5,11 +5,19 @@ import { useLocation } from 'react-router-dom';
 
 import Car from '../Car';
 import "./Cart.css";
+import storeItems from "../data/items.json"
 
-function Cart(lastBody) {
+function Cart() {
 
-
+  const getData = () =>{  
+    return localStorage.getItem("carrito")
+  }
   const [ carrito, setCarrito ] = useState("")
+
+  useEffect(() =>{
+    setCarrito(getData());
+  },["carrito"]);
+
 
   const carritoArr = carrito.split(",")
 // console.log(carritoArr)
@@ -22,16 +30,24 @@ const seat = carritoArr[5]
 const top = carritoArr[6]
 const steering = carritoArr[7]
 
+// const getRim = () => {
+//       storeItems[0].map(item => {
+//         // console.log(item.id) })
+      
+//     }
+// const findId(id){
+//   return storeItems.id === find(item => item.id === id)
+
+// }
+// console.log(storeItems[0])
+const findRim = storeItems[0].find(({ id }) => id === parseInt(rim));
+// const findSeat = storeItems[1].find(({ id }) => id === parseInt(seat));
+console.log(findRim)
 
 
 
-const getData = () =>{  
-  return localStorage.getItem("carrito")
-}
 
-useEffect(() =>{
-  setCarrito(getData());
-},[]);
+
 
   return (<>
         <div className="title">
@@ -57,12 +73,18 @@ useEffect(() =>{
             <li>Bumper color: <strong>{bumper}</strong></li>
             <li>Grill color: <strong>{grill}</strong></li>
             <li>Rollbar color: <strong>{rollbar}</strong></li> 
-            <li>Rims: <strong>{rim}</strong></li>
-            <li>Seats: <strong>{seat}</strong></li>
+            <li>Rims: <strong>{ rim }</strong></li>
+            {/* <li>Seats: <strong>{findSeat.name }</strong></li> */}
             <li>What type of top: <strong>{top}</strong> </li>
             <li>Steering wheel: <strong>{steering}</strong></li>
           </ul>
        </div>
+       
+       {/* <div>{storeItems[0].map(item =>(
+            // <div>{JSON.stringify(item.id)}</div>
+      //  ))}
+       </div> */}
+  
       
        
 
