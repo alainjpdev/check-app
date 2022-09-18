@@ -54,7 +54,7 @@ function Navbar() {
               SPECIAL EDITIONS
             </Link>
           </li>
-          <li className='nav-item'>
+          {/* <li className='nav-item'>
             <Link to="/aboutus" className='nav-links' onClick={closeMobileMenu}>
               ABOUT US
             </Link>
@@ -69,7 +69,7 @@ function Navbar() {
             <Link to="/specs" className='nav-links' onClick={closeMobileMenu}>
               SPECS
             </Link>
-          </li>
+          </li> */}
           <li className='nav-item'>
             <Link to="/news" className='nav-links' onClick={closeMobileMenu}>
               NEWS

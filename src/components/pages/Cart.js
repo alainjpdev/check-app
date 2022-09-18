@@ -12,11 +12,16 @@ function Cart() {
   const getData = () =>{  
     return localStorage.getItem("carrito")
   }
+  console.log(getData())
+
   const [ carrito, setCarrito ] = useState("")
 
+
   useEffect(() =>{
+    if(getData != "undefined")
     setCarrito(getData());
-  },["carrito"]);
+  },[carrito]);
+ 
 
 
   const carritoArr = carrito.split(",")
@@ -29,6 +34,7 @@ const rim = carritoArr[4]
 const seat = carritoArr[5]
 const top = carritoArr[6]
 const steering = carritoArr[7]
+// console.log(rim)
 
 // const getRim = () => {
 //       storeItems[0].map(item => {
@@ -39,10 +45,32 @@ const steering = carritoArr[7]
 //   return storeItems.id === find(item => item.id === id)
 
 // }
-// console.log(storeItems[0])
-const findRim = storeItems[0].find(({ id }) => id === parseInt(rim));
+
+const [findRim, setFindRim ] = useState("") 
+const [rimPrice, setRimPrice] = useState("")
+
+// setFindRim(storeItems[0].find(({ id }) => id === parseInt(rim)))
+// console.log(findRim)
+
+// const findingRim = storeItems[0].find(({ id }) => id === parseInt(rim))
+
+// console.log(findingRim)
+
+// useEffect(() => {
+//     if (findRim != "undefined"){
+//       setRimPrice(findRim.price)
+//       console.log(rimPrice)
+//     }
+// },[findRim])
+
+// const findRim = storeItems[0].find(({ id }) => id === parseInt(rim));
 // const findSeat = storeItems[1].find(({ id }) => id === parseInt(seat));
-console.log(findRim)
+// console.log(findRim)
+// if (findRim === "undefined"){
+// }else {
+//   const rimPrice = findRim.price
+//   console.log(rimPrice)
+// }
 
 
 
