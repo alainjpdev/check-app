@@ -3,6 +3,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import storeItems from "./data/items.json"
 
 export default function Steering(props) {
   const [age, setAge] = React.useState('');
@@ -23,14 +24,16 @@ export default function Steering(props) {
           onChange={handleChange}
           label="Age"
         >
-          <MenuItem value="">
+           <MenuItem value="">
             <em>None</em>
           </MenuItem>
-                <MenuItem value={"Standard Wheel + $0.00"}>Standard Wheel + $0.00</MenuItem>
-                <MenuItem value={"Wood Steering Wheel + $495.00"}>Wood Steering Wheel + $495.00</MenuItem>
-        </Select>
+          
+          {storeItems[3].map(item => (
+           <MenuItem value={item.id}>{JSON.stringify(item.name)}  ${item.price}</MenuItem>
+          ))}
+          </Select>
       </FormControl>
-      
+     
     </div>
   );
 }

@@ -1,6 +1,3 @@
-
-import { StyleTwoTone } from '@mui/icons-material';
-import { color } from '@mui/system';
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 
@@ -10,7 +7,7 @@ import Car from './Car';
 import "./CarCustom.css"
 import Charger from './Charger';
 import Cover from './Cover';
-import Cart from './pages/Cart';
+
 
 
 
@@ -20,6 +17,8 @@ import Seats from './Seats';
 import Steering from './Steering';
 import Stereo from './Stereo';
 import Tops from './Tops';
+
+import storeItems from "./data/items.json"
 
 const arrBumper = ["bumper black"];
 const arrRollbar = ["rollbar black"];
@@ -58,23 +57,43 @@ function CarCustom(setIsLoggedIn) {
         // console.log(arrBumper)  
     }
 
- 
+    const myPartFunc = () => {
+      if(myPart.toUpperCase()==="BODY"){
+        return <>
+        <p >{myPart.toUpperCase()}</p>
+        </>
+      }else if(myPart.toUpperCase()==="GRILL"){
+        return <>
+        <p >{myPart.toUpperCase()}</p>
+        </>
+      }else if(myPart.toUpperCase()==="ROLLBAR"){
+        return <>
+        <p >{myPart.toUpperCase()}</p>
+        </>
+      }else if(myPart.toUpperCase()==="BUMPER"){
+        return <>
+        <p >{myPart.toUpperCase()}</p>
+        </>
+      }
+      
+    }
 
     const shopAction = (e) => {
-     
+        
         const lastBody = arrBody[arrBody.length-1]
         const lastGrill = arrGrill[arrGrill.length-1]
         const lastRollbar = arrRollbar[arrRollbar.length-1]
         const lastBumper = arrBumper[arrBumper.length-1]
         
-        setShopCart([lastBody,lastGrill, lastRollbar, lastBumper, rim,seat,top,steering,stereo,charger,cover])  
-
+        // setShopCart([lastBody,lastGrill, lastRollbar, lastBumper, rim,seat,top,steering,stereo,charger,cover])  
+        localStorage.clear()
+        arrShopping.length = 0
         arrShopping.push(lastBody,lastGrill,lastRollbar,lastBumper,rim,seat,top,steering,stereo,charger,cover) 
         localStorage.setItem("carrito", arrShopping)
      
 
         
-        console.log(shopCart)    
+        // console.log(shopCart)    
            
     }
     
@@ -98,7 +117,7 @@ function CarCustom(setIsLoggedIn) {
 
     const [ steering, setSteering ] = useState("")
     
-    const [ stereo, setStereo ] = useState(Boolean) 
+    const [ stereo, setStereo ] = useState("") 
 
     const [ charger, setCharger ] = useState(Boolean)
 
@@ -106,15 +125,14 @@ function CarCustom(setIsLoggedIn) {
 
     const [ shopCart, setShopCart ] = useState([])
     
+
  
     
 
     
   return (
   <>
-
-
-  <div className="container">
+    <div className="container">
 
       <div className="container-image">
     
@@ -127,9 +145,7 @@ function CarCustom(setIsLoggedIn) {
       </div>
       
       <div className="border-colors">
-        {/* <h1>{ shopCart }</h1> */}
-
-      
+            
         <div className='container-title'>
         
                     <h2>Select a part of your MOKE</h2>
@@ -143,10 +159,10 @@ function CarCustom(setIsLoggedIn) {
                             <button
                                 type="button"
                                 key={part}
-                                className={"btn btn-light border-dark "}
+                                className={"btn btn-light border-dark bg-gray"}
                                 onClick={() => setMyPart(part)
-                                  
-                                }
+                                
+                            }
                             >
                                 {part.toLocaleUpperCase()}
                             </button>
@@ -155,7 +171,7 @@ function CarCustom(setIsLoggedIn) {
                 </div>
 
                 <div className="col text-center">
-                    <p>{myPart.toUpperCase()}</p>
+                    <p>{myPartFunc()}</p>
 
                     <div>
                     {myPart === "bumper" && (
@@ -242,12 +258,14 @@ function CarCustom(setIsLoggedIn) {
                 </div>
         </div>
 
+
      <div className="border-rims">
         <div className="container-title">RIMS {rim}</div>
         
         <Rims
         chooseRim={rim => setRim(rim)}/>
      </div>
+  
 
      <div className="border-seats">
      <div className="container-title">SEATS { seat }</div>

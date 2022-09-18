@@ -123,6 +123,9 @@
   padding: 0px 10px 0 10px 0px;
   /* justify-content: center; */
 }
+.bg-gray{
+  background: lightgray;
+}
 
 .pagination-container{
   padding: 30px;

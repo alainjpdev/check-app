@@ -1,0 +1,118 @@
+[
+    [{
+        "id": 1,
+        "name": "RIM SPORT",
+        "price": 475.00
+    },
+    {
+        "id": 2,
+        "name": "RIM BLACK",
+        "price": 600.00
+    },
+    {
+        "id": 3,
+        "name": "RIM WHITE",
+        "price": 695.00
+    },
+    {
+        "id": 4,
+        "name": "RIM RED",
+        "price": 695.00
+    },
+    {
+        "id": 5,
+        "name": "RIM BLUE",
+        "price": 695.00
+    },
+    {
+        "id": 6,
+        "name": "RIM PINK",
+        "price": 695.00
+    }],[ 
+    {
+        "id": 7,
+        "name": "SEATS BLACK",
+        "price": 0.00
+    },
+    {
+        "id": 8,
+        "name": "SEATS WHITE",
+        "price": 1200.00
+    },
+    {
+        "id": 9,
+        "name": "BENCH BLACK",
+        "price": 995.00
+    },
+    {
+        "id": 10,
+        "name": "BECH WHITE & SEAT",
+        "price": 1595.00
+    }],
+    [{
+        "id": 11,
+        "name": "BIMINI TOP BLACK",
+        "price": 795.00
+    },
+    {
+        "id": 12,
+        "name": "BIMINI TOP WHITE",
+        "price": 795.00
+    },
+    {
+        "id": 13,
+        "name": "BIMINI TOP TAN",
+        "price": 795.00
+    },
+    {
+        "id": 14,
+        "name": "Striped ToP",
+        "price": 475.00
+    },
+    {
+        "id": 15,
+        "name": "Bimini Top With Side Black",
+        "price": 1095.00
+    },
+    {
+        "id": 16,
+        "name": "Bimini Top With Side White",
+        "price": 1095.00
+    },
+    {
+        "id": 17,
+        "name": "Bimini Top With Side Tan",
+        "price": 1095.00
+    },
+    {
+        "id": 18,
+        "name": "Striped Top With Sides",
+        "price": 1195.00
+    }],
+    [{
+        "id": 19,
+        "name": "Standard Wheel",
+        "price": 0.00
+    },
+    {
+        "id": 20,
+        "name": "Wood Steering Wheel",
+        "price": 495.00
+    }],
+    [{
+        "id": 21,
+        "name": "BLUETOOTH STEREO",
+        "price": 500.00
+    }],
+    [{
+        "id": 22,
+        "name": "HIGH PERFORMANCE CHARGER",
+        "price": 995.00
+    }],
+    [{
+        "id": 23,
+        "name": "ALL WEATHER CAR COVER",
+        "price": 650.00
+    }]
+
+]

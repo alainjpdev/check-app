@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Checkbox from '@mui/material/Checkbox';
 
+
 export default function Stereo(props) {
   const [checked, setChecked] = React.useState(props.stereo);
 

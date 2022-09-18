@@ -3,6 +3,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import storeItems from "./data/items.json"
 
 export default function Seats(props) {
   const [age, setAge] = React.useState('');
@@ -23,16 +24,16 @@ export default function Seats(props) {
           onChange={handleChange}
           label="Age"
         >
-          <MenuItem value="">
+        <MenuItem value="">
             <em>None</em>
           </MenuItem>
-                <MenuItem value={"Black + $0.00"}>Black + $0.00</MenuItem>
-                <MenuItem value={"White + $1200.00"}>White + $1200.00</MenuItem>
-                <MenuItem value={"Bench Black + $995.00"}>Bench Black + $995.00</MenuItem>
-                <MenuItem value={"Bench White (and seats) + $1595"}>Bench White (and seats) + $1595</MenuItem>
-        </Select>
+          
+          {storeItems[1].map(item => (
+           <MenuItem value={item.id}>{JSON.stringify(item.name)}  ${item.price}</MenuItem>
+          ))}
+          </Select>
       </FormControl>
-      
+     
     </div>
   );
 }

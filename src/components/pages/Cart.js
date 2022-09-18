@@ -35,10 +35,10 @@ useEffect(() =>{
 
   return (<>
         <div className="title">
-                <p>Home >>  YOUR SHOPPING CART</p>
+                <p>HOME >>  YOUR SHOPPING CART</p>
               </div>
               <div className="subtitle">
-                <h5>My Moke</h5>
+                <h5>MY MOKE</h5>
         </div>
         <div className="margin-cart">
           <Car 

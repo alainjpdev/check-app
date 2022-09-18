@@ -3,6 +3,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import storeItems from "./data/items.json"
 
 export default function Tops(props) {
   const [age, setAge] = React.useState('');
@@ -26,16 +27,13 @@ export default function Tops(props) {
           <MenuItem value="">
             <em>None</em>
           </MenuItem>
-                <MenuItem value={"Bimini Top Black + $795.00"}>Bimini Top Black + $795.00</MenuItem>
-                <MenuItem value={"Bimini Top White + $795.00"}>Bimini Top White + $795.00</MenuItem>
-                <MenuItem value={"Bimini Top Tan + $795.00"}>Bimini Top Tan + $795.00</MenuItem>
-                <MenuItem value={"Striped Top + $895.00"}>Striped Top + $895.00</MenuItem>
-                <MenuItem value={"Bimini Top With Side Black + $1095.00"}>Bimini Top With Side Black + $1095.00</MenuItem>
-                <MenuItem value={"Bimini Top With Side White + $1095.00"}>Bimini Top With Side White + $1095.00</MenuItem>
-                <MenuItem value={"Bimini Top With Side Tan + $1095.00"}>Bimini Top With Side Tan + $1095.00</MenuItem>
-                <MenuItem value={"Striped Top With Sides + $1195"}>Striped Top With Sides + $1195</MenuItem>
-        </Select>
+          
+          {storeItems[2].map(item => (
+           <MenuItem value={item.id}>{JSON.stringify(item.name)}  ${item.price}</MenuItem>
+          ))}
+          </Select>
       </FormControl>
+     
     </div>
   );
 }
