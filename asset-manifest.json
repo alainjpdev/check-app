@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/check-app/static/css/main.4260f97f.css",
-    "main.js": "/check-app/static/js/main.c23f0fd3.js",
+    "main.css": "/check-app/static/css/main.49428f70.css",
+    "main.js": "/check-app/static/js/main.d83b11c3.js",
     "static/media/ma.mp4": "/check-app/static/media/ma.d25d38864d0ebff31b8d.mp4",
     "static/media/Moke_60_Anniversary_16x9_video.mp4": "/check-app/static/media/Moke_60_Anniversary_16x9_video.ca6162213f7e5bd8be3b.mp4",
     "static/media/5.png": "/check-app/static/media/5.4b01825fb2c12e12542a.png",
@@ -69,11 +69,11 @@
     "static/media/r-rose.png": "/check-app/static/media/r-rose.fd5d9eb20d44c210b32e.png",
     "static/media/s-test.png": "/check-app/static/media/s-test.bdc8457bfa203e40dd51.png",
     "index.html": "/check-app/index.html",
-    "main.4260f97f.css.map": "/check-app/static/css/main.4260f97f.css.map",
-    "main.c23f0fd3.js.map": "/check-app/static/js/main.c23f0fd3.js.map"
+    "main.49428f70.css.map": "/check-app/static/css/main.49428f70.css.map",
+    "main.d83b11c3.js.map": "/check-app/static/js/main.d83b11c3.js.map"
   },
   "entrypoints": [
-    "static/css/main.4260f97f.css",
-    "static/js/main.c23f0fd3.js"
+    "static/css/main.49428f70.css",
+    "static/js/main.d83b11c3.js"
   ]
 }
