@@ -33,48 +33,29 @@ function Cart() {
     
   // },[carrito])
 
-  // console.log(carrito)
-  // const cloneCarrito = []
-// if(carrito !== undefined && carrito.length !== 0){
-//   const cloneCarrito = [...carrito]
-//   console.log(cloneCarrito)
-// }
 
 
 
 
+  const savedValue = getSavedValue("carrito2")
+  const carritoArr = savedValue.replace(/['"]+/g, '').replace("[", "").replace("]", "").split(",")
 
-  // const getData = () =>{  
-  //   return localStorage.getItem("carrito")
-  // }
-  // console.log(getData())
-  // console.log(carrito)
-
+// console.log(carritoArr.split(","))
+  // replaceAll(',', '')
 
 
-  // useEffect(() =>{
-  //   if(getData !== undefined)
-  //   setCarrito(getData());
-  // },[carrito]);
- 
-// console.log(carrito)
-// const getSavedValue(key){
-//   const savedValue = localStorage.getItem(key)
-//   if(savedValue) return savedValue
-
-//   const x = getSavedValue("carrito")
-
-// const carritoArr = carrito.split(",")
+// const carritoArr = savedValue
 // console.log(carritoArr)
 
-// const body = carritoArr[0]
-// const grill = carritoArr[1]
-// const rollbar = carritoArr[2]
-// const bumper = carritoArr[3]
-// const rim = carritoArr[4]
-// const seat = carritoArr[5]
-// const top = carritoArr[6]
-// const steering = carritoArr[7]
+const body = carritoArr[0]
+const grill = carritoArr[1]
+const rollbar = carritoArr[2]
+const bumper = carritoArr[3]
+const rim = carritoArr[4]
+const seat = carritoArr[5]
+const top = carritoArr[6]
+const steering = carritoArr[7]
+
 
 
 // const [findRim, setFindRim ] = useState("")
@@ -82,8 +63,6 @@ function Cart() {
 // const [findTop, setFindTop ] = useState("")
 
 
-const savedValue = getSavedValue("carrito2")
-console.log(savedValue)
 
 
 // const findingRim = storeItems[0].find(({ id }) => id === parseInt(rim))
@@ -131,26 +110,26 @@ console.log(savedValue)
                 <h5>MY MOKE</h5>
         </div>
         <div className="margin-cart">
-          {/* <Car 
+           <Car 
           body={body} 
           grill={grill}
           rollbar={rollbar}
           bumper={bumper}
           />
-           */}
+           
        </div>
        <div className="border-cart">
         <div className="shop-details-container">
           <ul>
-            {/* <li>Moke type:<strong> ELECTRIC</strong></li>
+            <li>Moke type:<strong> ELECTRIC</strong></li>
             <li>Body color: <strong>{body}</strong></li> 
             <li>Bumper color: <strong>{bumper}</strong></li>
             <li>Grill color: <strong>{grill}</strong></li>
             <li>Rollbar color: <strong>{rollbar}</strong></li> 
-            <li>Rims: <strong>{ rim }</strong></li> */}
-            {/* <li>Seats: <strong>{findSeat.name }</strong></li> */}
-            {/* <li>What type of top: <strong>{top}</strong> </li>
-            <li>Steering wheel: <strong>{steering}</strong></li> */}
+            <li>Rims: <strong>{ rim }</strong></li> 
+            <li>Seats: <strong>{ }</strong></li>
+            <li>What type of top: <strong>{top}</strong> </li>
+            <li>Steering wheel: <strong>{steering}</strong></li>
           </ul>
        </div>
        
