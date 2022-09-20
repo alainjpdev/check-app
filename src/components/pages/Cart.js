@@ -6,74 +6,120 @@ import { useLocation } from 'react-router-dom';
 import Car from '../Car';
 import "./Cart.css";
 import storeItems from "../data/items.json"
+import useLocalStorage from '../../hooks/useLocalStorage';
+
+function getSavedValue(key){
+  const savedValue = localStorage.getItem(key)
+  if(savedValue) return savedValue
+}
+
 
 function Cart() {
 
-  const getData = () =>{  
-    return localStorage.getItem("carrito")
-  }
-  console.log(getData())
-
-  const [ carrito, setCarrito ] = useState("")
-
-
-  useEffect(() =>{
-    if(getData != "undefined")
-    setCarrito(getData());
-  },[carrito]);
  
+// const carrito = getSavedValue("carrito")
+// console.log(carrito)
+  // const [value, setValue ] = useLocalStorage("carrito")
+  // const [ carrito, setCarrito ] = useState("")
+ 
+// const carrito = ""
+  // useEffect(() => {
+  //   if(carrito !== undefined && carrito.length === 0){
+  //     const carrito = localStorage.getItem("carrito")
+  //   }
+    
+  //   // console.log(carrito)
+    
+    
+  // },[carrito])
 
-
-  const carritoArr = carrito.split(",")
-// console.log(carritoArr)
-const body = carritoArr[0]
-const grill = carritoArr[1]
-const rollbar = carritoArr[2]
-const bumper = carritoArr[3]
-const rim = carritoArr[4]
-const seat = carritoArr[5]
-const top = carritoArr[6]
-const steering = carritoArr[7]
-// console.log(rim)
-
-// const getRim = () => {
-//       storeItems[0].map(item => {
-//         // console.log(item.id) })
-      
-//     }
-// const findId(id){
-//   return storeItems.id === find(item => item.id === id)
-
+  // console.log(carrito)
+  // const cloneCarrito = []
+// if(carrito !== undefined && carrito.length !== 0){
+//   const cloneCarrito = [...carrito]
+//   console.log(cloneCarrito)
 // }
 
-const [findRim, setFindRim ] = useState("") 
-const [rimPrice, setRimPrice] = useState("")
 
-// setFindRim(storeItems[0].find(({ id }) => id === parseInt(rim)))
-// console.log(findRim)
+
+
+
+  // const getData = () =>{  
+  //   return localStorage.getItem("carrito")
+  // }
+  // console.log(getData())
+  // console.log(carrito)
+
+
+
+  // useEffect(() =>{
+  //   if(getData !== undefined)
+  //   setCarrito(getData());
+  // },[carrito]);
+ 
+// console.log(carrito)
+// const getSavedValue(key){
+//   const savedValue = localStorage.getItem(key)
+//   if(savedValue) return savedValue
+
+//   const x = getSavedValue("carrito")
+
+// const carritoArr = carrito.split(",")
+// console.log(carritoArr)
+
+// const body = carritoArr[0]
+// const grill = carritoArr[1]
+// const rollbar = carritoArr[2]
+// const bumper = carritoArr[3]
+// const rim = carritoArr[4]
+// const seat = carritoArr[5]
+// const top = carritoArr[6]
+// const steering = carritoArr[7]
+
+
+// const [findRim, setFindRim ] = useState("")
+// const [findSeat, setFindSeat ] = useState("") 
+// const [findTop, setFindTop ] = useState("")
+
+
+const savedValue = getSavedValue("carrito2")
+console.log(savedValue)
+
 
 // const findingRim = storeItems[0].find(({ id }) => id === parseInt(rim))
 
-// console.log(findingRim)
+// useEffect(() => {
+//   if (findingRim !== undefined ){    
+   
+//     setFindRim(findingRim.price)
+//     // console.log(findRim)
+//   }
+// },[findingRim])
+
+// const findingSeat = storeItems[1].find(({ id }) => id === parseInt(seat))
 
 // useEffect(() => {
-//     if (findRim != "undefined"){
-//       setRimPrice(findRim.price)
-//       console.log(rimPrice)
-//     }
-// },[findRim])
+//   if (findingSeat !== undefined ){    
 
-// const findRim = storeItems[0].find(({ id }) => id === parseInt(rim));
-// const findSeat = storeItems[1].find(({ id }) => id === parseInt(seat));
+//     setFindRim(findingSeat.price)
+//     // console.log(findSeat)
+//   }
+// },[findingSeat])
+
+// const findingTop = storeItems[2].find(({ id }) => id === parseInt(top))
+
+// useEffect(() => {
+//   if (findingTop !== undefined ){    
+   
+//     setFindTop(findingTop.price)
+//     // console.log(findTop)
+//   }
+// },[findingTop])
+
+
+
+// console.log(findTop)
 // console.log(findRim)
-// if (findRim === "undefined"){
-// }else {
-//   const rimPrice = findRim.price
-//   console.log(rimPrice)
-// }
-
-
-
 
 
 
@@ -85,26 +131,26 @@ const [rimPrice, setRimPrice] = useState("")
                 <h5>MY MOKE</h5>
         </div>
         <div className="margin-cart">
-          <Car 
+          {/* <Car 
           body={body} 
           grill={grill}
           rollbar={rollbar}
           bumper={bumper}
           />
-          
+           */}
        </div>
        <div className="border-cart">
         <div className="shop-details-container">
           <ul>
-            <li>Moke type:<strong> ELECTRIC</strong></li>
+            {/* <li>Moke type:<strong> ELECTRIC</strong></li>
             <li>Body color: <strong>{body}</strong></li> 
             <li>Bumper color: <strong>{bumper}</strong></li>
             <li>Grill color: <strong>{grill}</strong></li>
             <li>Rollbar color: <strong>{rollbar}</strong></li> 
-            <li>Rims: <strong>{ rim }</strong></li>
+            <li>Rims: <strong>{ rim }</strong></li> */}
             {/* <li>Seats: <strong>{findSeat.name }</strong></li> */}
-            <li>What type of top: <strong>{top}</strong> </li>
-            <li>Steering wheel: <strong>{steering}</strong></li>
+            {/* <li>What type of top: <strong>{top}</strong> </li>
+            <li>Steering wheel: <strong>{steering}</strong></li> */}
           </ul>
        </div>
        
@@ -119,7 +165,7 @@ const [rimPrice, setRimPrice] = useState("")
        </div>
        <div className="border-cart">
        <div className="shop-details-container">
-        Item Price: <strong>$35,000.00</strong> 
+        Item Price: <strong>{}</strong> 
        </div>
        </div>
        <div className="border-cart">

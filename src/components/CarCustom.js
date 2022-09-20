@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 
 import { ColorsData } from './BodyColors';
@@ -19,6 +20,13 @@ import Stereo from './Stereo';
 import Tops from './Tops';
 
 import storeItems from "./data/items.json"
+import useLocalStorage from '../hooks/useLocalStorage';
+import Cart from './pages/Cart';
+
+import { useNavigate } from "react-router-dom";
+
+
+
 
 const arrBumper = ["black"];
 const arrRollbar = ["black"];
@@ -26,18 +34,30 @@ const arrBody = ["black"];
 const arrGrill = ["black"];
 const arrShopping = [];
 
+        
+const lastBody = []
+const lastGrill = []
+const lastRollbar = []
+const lastBumper = []
+
+const arrtest = []
+
 function CarCustom(setIsLoggedIn) {
+
+  const navigate = useNavigate();
 
      const afterClickBody = (e) =>{
     setBody(e.target.id)
     arrBody.push(e.target.id)
     //  console.log(arrBody)
+    arrtest.push(arrBody)
     }
 
     const afterClickGrill = (e) =>{    
       setGrill(e.target.id)
       arrGrill.push(e.target.id)  
       // console.log(arrGrill)  
+      arrtest.push(arrGrill)
       }
     const afterClickRollbar = (e) =>{
    
@@ -48,12 +68,14 @@ function CarCustom(setIsLoggedIn) {
           }
           arrRollbar.push(e.target.id)
           // console.log(arrRollbar)
+          arrtest.push(arrRollbar)
         }
 
         
     const afterClickBumper = (e) =>{     
         setBumper(e.target.id)
         arrBumper.push(e.target.id);
+        arrtest.push(arrBumper)
         // console.log(arrBumper)  
     }
 
@@ -78,24 +100,38 @@ function CarCustom(setIsLoggedIn) {
       
     }
 
+    // const redirect = (e) =>{
+    //   <Cart/>
+    // }
+
+
     const shopAction = (e) => {
         
         const lastBody = arrBody[arrBody.length-1]
         const lastGrill = arrGrill[arrGrill.length-1]
         const lastRollbar = arrRollbar[arrRollbar.length-1]
         const lastBumper = arrBumper[arrBumper.length-1]
-        
+     
+          localStorage.clear()
+          arrShopping.length = 0
+          arrShopping.push(lastBody,lastGrill,lastRollbar,lastBumper,rim,seat,top,steering,stereo,charger,cover) 
+          localStorage.setItem("carrito2", JSON.stringify(arrShopping))
+          // setValue(arrShopping)
+          // setShopping(arrShopping)
         // setShopCart([lastBody,lastGrill, lastRollbar, lastBumper, rim,seat,top,steering,stereo,charger,cover])  
-        localStorage.clear()
-        arrShopping.length = 0
-        arrShopping.push(lastBody,lastGrill,lastRollbar,lastBumper,rim,seat,top,steering,stereo,charger,cover) 
-        localStorage.setItem("carrito", arrShopping)
-       
+     
 
         
         // console.log(shopCart)    
            
     }
+  
+
+
+  
+    
+
+    // const [value, setValue ] = useLocalStorage("carrito2", "")
     
     const parts = ["body", "grill", "rollbar", "bumper"];
 
@@ -126,10 +162,31 @@ function CarCustom(setIsLoggedIn) {
     const [ shopCart, setShopCart ] = useState([])
     
 
- 
-    
+    // console.log(typeof(rim))
 
-    
+   
+
+    // CarCustom.propTypes = {
+    //   rim: PropTypes.number.isRequired
+    // };
+ 
+//     const toRender = ""
+// const checkerCondition = (e) =>{
+//   if(rim === typeof(Number)){
+//     toRender =  <Link to="/cart" className='btn-add-cart' onClick={shopAction}>ADD TO CART</Link>
+// } else {
+//   toRender = <Link to="/shop" className='btn-add-cart' onClick={shopAction}>ADD TO CART</Link>
+// }
+
+
+// }
+   
+// arrShopping.push(lastBody,lastGrill,lastRollbar,lastBumper,rim,seat,top,steering,stereo,charger,cover) 
+
+
+
+
+
   return (
   <>
     <div className="container">
@@ -313,14 +370,12 @@ function CarCustom(setIsLoggedIn) {
      /> ALL WEATHER CAR COVER + $650.00
      </div>
 
-     {/* <div className="btn-add-cart" onClick={shopAction}>
-      <Link to="/cart" className='redButton'></Link>ADD TO CARTO LINK</div> */}
 
-      {/* <div className="" > */}
       <Link to="/cart" className='btn-add-cart' onClick={shopAction}>ADD TO CART</Link>
-      {/* </div> */}
-             
 
+      {/* <button className='btn-add-cart' onClick={checkerCondition}>ADD TO CART</button> */}
+      {/* <button className='btn-add-cart' onClick={redirect}>ADD TO CART</button> */}
+      {/* <button onClick={() => navigate("/cart")}>go cart</button> */}
   </div>
     </>
   )
