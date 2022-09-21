@@ -67,14 +67,14 @@ export default function SpecialEditions() {
  <div className="btn-add-cart-007">ADD TO CART</div>
           </div>
           <div className="movies-image-container">
-            <img src='./images/jamesBondMovies/Live_and_Let_Die_-_01_1024x1024.png' 
+            {/* <img src='./images/jamesBondMovies/Live_and_Let_Die_-_01_1024x1024.png' 
                       className='img-movie' alt='cualquier cosa'/>
               <img src='./images/jamesBondMovies/Moonraker_-_01_1024x1024.png' 
                       className='img-movie' alt='cualquier cosa'/>
               <img src='./images/jamesBondMovies/4.webp' 
                       className='img-movie' alt='cualquier cosa4'/>
               <img src='./images/jamesBondMovies/The_Spy_Who_Loved_Me_-_01_1024x1024.webp' 
-                      className='img-movie' alt='cualquier cosa'/>
+                      className='img-movie' alt='cualquier cosa'/> */}
           </div>
 
       </div>

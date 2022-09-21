@@ -7,7 +7,7 @@ import militarMoke from "../images/2.png"
 import rainbowMoke from "../images/3.png"
 import yellowMoke from "../images/4.png"
 import otherMoke from "../images/5.png"
-import videoAd from "../videos/ma.mp4"
+import videoAd from "../videos/mokeCool.mp4"
 
 
 

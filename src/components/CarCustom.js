@@ -112,7 +112,7 @@ function CarCustom(setIsLoggedIn) {
         const lastRollbar = arrRollbar[arrRollbar.length-1]
         const lastBumper = arrBumper[arrBumper.length-1]
      
-          localStorage.clear()
+          localStorage.removeItem("carrito2")
           arrShopping.length = 0
           arrShopping.push(lastBody,lastGrill,lastRollbar,lastBumper,rim,seat,top,steering,stereo,charger,cover) 
           localStorage.setItem("carrito2", JSON.stringify(arrShopping))
@@ -316,37 +316,37 @@ function CarCustom(setIsLoggedIn) {
         </div>
 
 
-     <div className="border-rims">
+     {/* <div className="border-rims">
         <div className="container-title">RIMS {rim}</div>
         
         <Rims
         chooseRim={rim => setRim(rim)}/>
      </div>
-  
+   */}
 
-     <div className="border-seats">
+     {/* <div className="border-seats">
      <div className="container-title">SEATS { seat }</div>
      
      <Seats
       chooseSeat={seat => setSeat(seat)}/>
-     </div>
+     </div> */}
 
-     <div className="border-top">
+     {/* <div className="border-top">
      <div className="container-title">What kind of Top { top}</div>
      
      <Tops
      chooseTop={top => setTop(top)}/>
-     </div>
+     </div> */}
 
-     <div className="border-top">
+     {/* <div className="border-top">
      <div className="container-title">STEERING WHEEL { steering }</div>
      
      <Steering
       chooseSteering={steering => setSteering(steering)}/>
-     </div>
+     </div> */}
 
-     <div className="border-top">
-     {/* <div className="container-title"></div> */}
+     {/* <div className="border-top">
+    
 
      <Stereo
      stereo={stereo }
@@ -354,7 +354,7 @@ function CarCustom(setIsLoggedIn) {
      </div>
 
      <div className="border-top">
-     {/* <div className="container-title"></div> */}
+    
 
      <Charger
      charger={charger}
@@ -362,13 +362,13 @@ function CarCustom(setIsLoggedIn) {
      </div>
 
      <div className="border-top">
-     {/* <div className="container-title"></div> */}
+    
 
      <Cover
      cover={cover}
      isIt={setCover}
      /> ALL WEATHER CAR COVER + $650.00
-     </div>
+     </div> */}
 
 
       <Link to="/cart" className='btn-add-cart' onClick={shopAction}>ADD TO CART</Link>

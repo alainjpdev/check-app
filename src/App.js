@@ -12,6 +12,7 @@ import Specs from './components/pages/Specs';
 import News from './components/pages/News';
 import Footer from './components/Footer';
 import Cart from './components/pages/Cart';
+import HomeMark from './components/pages/HomeMark';
 
 
 
@@ -24,6 +25,7 @@ function App() {
         <Navbar/>
         <Routes>
           <Route path="/"  element={<Home/>}/>
+          <Route path="/mark"  element={<HomeMark/>}/>
           <Route path="/shop" element={<Shop/>}/>
           <Route path="/specialeditions" element={<SpecialEditions/>}/>
           <Route path="/aboutus"element={<AboutUs/>}/>

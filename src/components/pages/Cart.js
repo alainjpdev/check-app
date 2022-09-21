@@ -1,12 +1,15 @@
 import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import Car from '../Car';
 import "./Cart.css";
 import storeItems from "../data/items.json"
 import useLocalStorage from '../../hooks/useLocalStorage';
+
+import emailjs from '@emailjs/browser';
+import {useRef} from "react"
 
 function getSavedValue(key){
   const savedValue = localStorage.getItem(key)
@@ -15,6 +18,8 @@ function getSavedValue(key){
 
 
 function Cart() {
+
+  const form = useRef()
 
  
 // const carrito = getSavedValue("carrito")
@@ -34,12 +39,12 @@ function Cart() {
   // },[carrito])
 
 
+const stripePay = ""
 
-
-
+  const salesagent = getSavedValue("sales")
   const savedValue = getSavedValue("carrito2")
   const carritoArr = savedValue.replace(/['"]+/g, '').replace("[", "").replace("]", "").split(",")
-
+  console.log(salesagent)
 // console.log(carritoArr.split(","))
   // replaceAll(',', '')
 
@@ -55,6 +60,25 @@ const rim = carritoArr[4]
 const seat = carritoArr[5]
 const top = carritoArr[6]
 const steering = carritoArr[7]
+
+const checkout = ()=>{
+
+
+}
+
+const sendEmail = (e) => {
+  e.preventDefault();
+
+  emailjs.sendForm('service_t42ges4', 'template_sxl46nq', form.current, 'LWhLzpN2d1Yzzs4DY')
+    .then((result) => {
+        console.log(result.text);
+    }, (error) => {
+        console.log(error.text);
+    });
+    window.location.href ="https://checkout.stripe.com/c/pay/cs_live_a1iE5oRmN8eFl9iltXW7xAlUiMXzwy0YgKn0QYCOMmCmyuNjTVfy9HCUmY#fidkdWxOYHwnPyd1blppbHNgWjA0Tnc3NkRDclV1VWtVQH1DR3Z%2FUkliNGBidUdBUU1ub0JOXFJXU0lhPEpcQ3Rkd1wyQ3V0QW1KU3ZdNWJxS1N%2FNnBhRFdDblBnVzY9NW1WY0NjYX1yTDBkNTVMcW9wfUQwMScpJ3VpbGtuQH11anZgYUxhJz8nZEBQPEF3ZGBkMTVnMV0zNDEzJ3gl"
+       
+
+};
 
 
 
@@ -122,14 +146,14 @@ const steering = carritoArr[7]
         <div className="shop-details-container">
           <ul>
             <li>Moke type:<strong> ELECTRIC</strong></li>
-            <li>Body color: <strong>{body}</strong></li> 
-            <li>Bumper color: <strong>{bumper}</strong></li>
-            <li>Grill color: <strong>{grill}</strong></li>
-            <li>Rollbar color: <strong>{rollbar}</strong></li> 
-            <li>Rims: <strong>{ rim }</strong></li> 
+            <li>Body color: <strong>{body.toUpperCase()}</strong></li> 
+            <li>Bumper color: <strong>{bumper.toUpperCase()}</strong></li>
+            <li>Grill color: <strong>{grill.toUpperCase()}</strong></li>
+            <li>Rollbar color: <strong>{rollbar.toUpperCase()}</strong></li> 
+            {/* <li>Rims: <strong>{ rim }</strong></li> 
             <li>Seats: <strong>{ }</strong></li>
             <li>What type of top: <strong>{top}</strong> </li>
-            <li>Steering wheel: <strong>{steering}</strong></li>
+            <li>Steering wheel: <strong>{steering}</strong></li> */}
           </ul>
        </div>
        
@@ -144,15 +168,21 @@ const steering = carritoArr[7]
        </div>
        <div className="border-cart">
        <div className="shop-details-container">
-        Item Price: <strong>{}</strong> 
+        Item Price TOTAL: <strong>$29,990</strong> 
        </div>
        </div>
        <div className="border-cart">
        <div className="shop-details-container">
-        TOTAL: <strong>$35,000.00</strong> 
+        DEPOSIT OF FIRST PAY: <strong>$15,000.00</strong> 
        </div>
        </div>
-       <div className="btn-add-cart"><a href='https://buy.stripe.com/cN27ubaPM5WKgJa288'> CHECK OUT</a></div>
+       <div className="btn-add-cart">
+        <form ref={form} 
+        onClick={sendEmail} 
+        salesagent={salesagent}>
+       <a href="https://checkout.stripe.com/c/pay/cs_live_a1iE5oRmN8eFl9iltXW7xAlUiMXzwy0YgKn0QYCOMmCmyuNjTVfy9HCUmY#fidkdWxOYHwnPyd1blppbHNgWjA0Tnc3NkRDclV1VWtVQH1DR3Z%2FUkliNGBidUdBUU1ub0JOXFJXU0lhPEpcQ3Rkd1wyQ3V0QW1KU3ZdNWJxS1N%2FNnBhRFdDblBnVzY9NW1WY0NjYX1yTDBkNTVMcW9wfUQwMScpJ3VpbGtuQH11anZgYUxhJz8nZEBQPEF3ZGBkMTVnMV0zNDEzJ3gl"
+        target="_blank" >CHECKOUT</a><textarea name="message" className='hide' display="none">{salesagent}</textarea></form>
+      </div>
         
 
 
