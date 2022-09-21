@@ -61,10 +61,6 @@ const seat = carritoArr[5]
 const top = carritoArr[6]
 const steering = carritoArr[7]
 
-const checkout = ()=>{
-
-
-}
 
 const sendEmail = (e) => {
   e.preventDefault();
@@ -168,7 +164,7 @@ const sendEmail = (e) => {
        </div>
        <div className="border-cart">
        <div className="shop-details-container">
-        Item Price TOTAL: <strong>$29,990</strong> 
+        ITEM PRICE TOTAL: <strong>$29,990.00</strong> 
        </div>
        </div>
        <div className="border-cart">

@@ -23,6 +23,7 @@ function App() {
     <div className="wraper">
      
         <Navbar/>
+        <Home/> 
         <Routes>
           <Route path="/"  element={<Home/>}/>
           <Route path="/mark"  element={<HomeMark/>}/>
