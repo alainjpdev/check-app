@@ -176,8 +176,7 @@ const sendEmail = (e) => {
         <form ref={form} 
         onClick={sendEmail} 
         salesagent={salesagent}>
-       <a href="https://checkout.stripe.com/c/pay/cs_live_a1iE5oRmN8eFl9iltXW7xAlUiMXzwy0YgKn0QYCOMmCmyuNjTVfy9HCUmY#fidkdWxOYHwnPyd1blppbHNgWjA0Tnc3NkRDclV1VWtVQH1DR3Z%2FUkliNGBidUdBUU1ub0JOXFJXU0lhPEpcQ3Rkd1wyQ3V0QW1KU3ZdNWJxS1N%2FNnBhRFdDblBnVzY9NW1WY0NjYX1yTDBkNTVMcW9wfUQwMScpJ3VpbGtuQH11anZgYUxhJz8nZEBQPEF3ZGBkMTVnMV0zNDEzJ3gl"
-        target="_blank" >CHECKOUT</a><textarea name="message" className='hide' display="none">{salesagent}</textarea></form>
+       <a href="https://checkout.stripe.com/c/pay/cs_live_a1iE5oRmN8eFl9iltXW7xAlUiMXzwy0YgKn0QYCOMmCmyuNjTVfy9HCUmY#fidkdWxOYHwnPyd1blppbHNgWjA0Tnc3NkRDclV1VWtVQH1DR3Z%2FUkliNGBidUdBUU1ub0JOXFJXU0lhPEpcQ3Rkd1wyQ3V0QW1KU3ZdNWJxS1N%2FNnBhRFdDblBnVzY9NW1WY0NjYX1yTDBkNTVMcW9wfUQwMScpJ3VpbGtuQH11anZgYUxhJz8nZEBQPEF3ZGBkMTVnMV0zNDEzJ3gl" >CHECKOUT</a><textarea name="message" className='hide' display="none">{salesagent}</textarea></form>
       </div>
         
 
