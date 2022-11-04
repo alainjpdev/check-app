@@ -23,9 +23,9 @@ function App() {
     <div className="wraper">
      
         <Navbar/>
-        <Home/> 
+        
         <Routes>
-          <Route path="/"  element={<Home/>}/>
+          <Route path="/" index element={<Home/>}/>
           <Route path="/mark"  element={<HomeMark/>}/>
           <Route path="/shop" element={<Shop/>}/>
           <Route path="/specialeditions" element={<SpecialEditions/>}/>

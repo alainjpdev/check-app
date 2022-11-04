@@ -40,7 +40,7 @@ function HeroSection(props) {
           {/* <div className="botton-container" onClick={ window.location.href='/shop'}> */}
           <div className="botton-container">
                  
-               <Link to="/shop" className='redButton'>BUILD YOURS</Link>
+               <Link to="/shop" className='greenButton'>BUILD YOURS</Link>
           
 
           </div>         
