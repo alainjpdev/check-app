@@ -15,7 +15,8 @@ import byellow from "../images/moke pics/grill/g-yellow.png"
 export function Grill(props){
     if(props.color === "black"){
       return(
-        <>
+        <> 
+          
           <img className="image2" src={bblack} width={"300px"} alt="Something"key={3}/>
         </>
        )
