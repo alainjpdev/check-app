@@ -124,7 +124,7 @@ const sendEmail = (e) => {
 
   return (<>
         <div className="title">
-                <p>HOME >>  YOUR SHOPPING CART</p>
+                <p>HOME   YOUR SHOPPING CART</p>
               </div>
               <div className="subtitle">
                 <h5>MY MOKE</h5>
