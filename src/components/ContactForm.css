@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* <div className="h-full flex justify-center flex-col"> */
+
+.contact-container{
+height: 10%;
+-ms-flex-align: justify-center;
+flex-direction: column;
+}

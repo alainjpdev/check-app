@@ -18,18 +18,18 @@ function Footer() {
         <div className='input-areas'>
           <form>
        
-            <Link className='greenButton'>RENT A MOKE</Link>
+            <Link to="/rent" className='greenButton'>RENT A MOKE</Link>
             <br></br>
             <br></br>
             <br></br>
-            <Link to="/shop"className='greenButton'>BUY A MOKE</Link>
+            <Link to="/"className='greenButton'>BUY A MOKE</Link>
            
           </form>
         </div>
       </section>
       <div class='footer-links'>
         <div className='footer-link-wrapper'>
-          <div class='footer-link-items'>
+          <div className='footer-link-items'>
             <h2>MOKE TULUM</h2>
             <p>From British classic to Caribbean icon, 
               Moke has become a symbol of fun in the sun.
@@ -39,30 +39,31 @@ function Footer() {
           </div>
           <div class='footer-link-items'>
             <h2>Contact Us</h2>
-            <Link to='/'>Contact</Link>
-            <Link to='/'>Support</Link>
-            <Link to='/'>Destinations</Link>
-            <Link to='/'>Sponsorships</Link>
+            <Link to='/contact'>Contact</Link>
+            {/* <Link to='/'>Support</Link> */}
+            {/* <Link to='/'>Destinations</Link> */}
+            {/* <Link to='/'>Sponsorships</Link> */}
           </div>
         </div>
         <div className='footer-link-wrapper'>
-          <div class='footer-link-items'>
+          {/* <div class='footer-link-items'>
             <h2>Videos</h2>
             <Link to='/'>Submit Video</Link>
             <Link to='/'>Ambassadors</Link>
             <Link to='/'>Agency</Link>
             <Link to='/'>Influencer</Link>
-          </div>
+          </div> */}
           <div class='footer-link-items'>
             <h2>Social Media</h2>
-            <Link to='/'>Instagram</Link>
-            <Link to='/'>Facebook</Link>
-            <Link to='/'>Youtube</Link>
-            <Link to='/'>Twitter</Link>
+            {/* <Link to=''>Instagram</Link> */}
+            <a href={'https://www.instagram.com/moketulum/'}>Instagram</a>
+            {/* <Link to='/'>Facebook</Link> */}
+            {/* <Link to='/'>Youtube</Link> */}
+            {/* <Link to='/'>Twitter</Link> */}
           </div>
         </div>
       </div>
-      <section class='social-media'>
+      {/* <section class='social-media'>
         <div class='social-media-wrap'>
           
           <small class='website-rights'>MR. JEAN PAUL TULUM © 2022</small>
@@ -109,7 +110,7 @@ function Footer() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
