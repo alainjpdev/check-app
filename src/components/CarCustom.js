@@ -371,7 +371,7 @@ function CarCustom(setIsLoggedIn) {
      </div> */}
 
 
-      <Link to="/cart" className='greenButton' target="_blank" onClick={shopAction}>ADD TO CART</Link>
+      <Link to="/cart" className='greenButton' onClick={shopAction}>ADD TO CART</Link>
 
       {/* <button className='btn-add-cart' onClick={checkerCondition}>ADD TO CART</button> */}
       {/* <button className='btn-add-cart' onClick={redirect}>ADD TO CART</button> */}
