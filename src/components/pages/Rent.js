@@ -1,18 +1,32 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import rentMoke from "./mediaPages/rentmoke.mp4"
+import "./Rent.css"
 
-function Rent() {
-    return (
-        <div className="h-full flex justify-center flex-col">
+
+
+
+
+
+
+
+        // <div className="h-full flex justify-center flex-col">
        
     
-          <div className=" w-2/3 m-auto p-8 shadow-lg">
-            <h1 className="text-4xl font-bold flex items-center">
-              <span>
+        //   <div className=" w-2/3 m-auto p-8 shadow-lg">
+        //     <h1 className="text-4xl font-bold flex items-center">
+        //       <span>
                 
-              </span>
-              <br/>
-              <br/>
+        //       </span>
+function Rent() {
+    return (
+      <>
+     
+        <div className='hero-container-rent'>
+       <video src={rentMoke} width="100%"autoPlay loop muted controls/>
+      
+      
+         <h1 className="text-4xl font-bold flex items-center">
+
               <br/>
               <span>RENT MOKE PER DAY</span>
               <br/>
@@ -36,11 +50,19 @@ function Rent() {
               <br/>
               <br/>
               <br/>
+              </h1>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
     
-            </h1>
+          
 
-          </div>
-        </div>
+              </div>
+  
+        </>
       );
 }
 
