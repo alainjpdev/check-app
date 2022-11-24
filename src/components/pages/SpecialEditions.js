@@ -9,7 +9,7 @@ export default function SpecialEditions() {
 
   return <>
   <div className="title">
-  <p>Home  >>  Cars  >>  60 Years of Bond Moke Edition 2022</p>
+  <p>Home    Cars    60 Years of Bond Moke Edition 2022</p>
   </div>
     <div className="image-container">
     <img src={specialImg} 
