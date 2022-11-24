@@ -15,11 +15,15 @@
     width: 100%;
     margin: 0 auto;
     padding: 0px;
+    justify-content: space-around;
   }
   
   .cards__wrapper {
     position: relative;
+    display: flex;
     /* margin: 10px 0 5px; */
+    justify-content: space-around;
+
     width: 100%;
     padding: 20px;
   }
@@ -30,6 +34,8 @@
   
   .cards__items {
     margin-bottom: 10px;
+    justify-content: space-around;
+
   }
   
   .cards__item {
