@@ -12,8 +12,8 @@ function Cards() {
       
       
       <div className='cards__container'>
-        <div className='cards__wrapper'>
-          <ul className='cards__items'>
+        {/* <div className='cards__wrapper'> */}
+          <div className='cards__items'>
           <CardItem
               src={ kardashianNews }
               text_title="Posted on Dec 28, 2021"
@@ -53,11 +53,11 @@ function Cards() {
               label='Moke America At F1 Miami Grand Prix'
               path='/services'
             />
-          </ul>
+          </div>
       
         </div>
       </div>
-    </div>
+    // </div>
   );
 }
 

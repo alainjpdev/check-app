@@ -28,24 +28,28 @@ function Rent() {
          <h1 className="text-4xl font-bold flex items-center">
 
               <br/>
+              <div className='rent-container'>
               <span>RENT MOKE PER DAY</span>
               <br/>
           
               <br/>
-              <h2>
-            2 HOURS 100 USD 
-            <a target="_blanck" className="greenButton" href="https://buy.stripe.com/5kA16V3PM40bcpy28e" >Rent Now</a>
-            </h2>
+              <div>
+                <h2>2 HOURS 100 USD</h2>
+                <br/>
+                <a target="_blanck" className="greenButton" href="https://buy.stripe.com/5kA16V3PM40bcpy28e" >Rent Now</a>
+              </div>
             
             <br/>
-            <h2>
-            4-5 HOURS 170 USD
-            <a  target="_blanck" className="greenButton" href="https://buy.stripe.com/3cseXLgCyaozfBK9AF" >Rent Now</a>
+
+            <div>
+              <h2>4-5 HOURS 170 USD</h2>
+              <br/>
+              <a  target="_blanck" className="greenButton" href="https://buy.stripe.com/3cseXLgCyaozfBK9AF" >Rent Now</a>
             
-            </h2>
-            <h2>
-              {/* Camila */}
-            </h2>
+            </div>
+            </div>
+            
+            
             <br/>
               <br/>
               <br/>
