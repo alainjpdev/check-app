@@ -34,7 +34,7 @@ function Rent() {
           
               <br/>
               <div>
-                <h2>2 HOURS 100 USD</h2>
+                <h2>2 HOURS 125 USD</h2>
                 <br/>
                 <a target="_blanck" className="greenButton" href="https://buy.stripe.com/5kA16V3PM40bcpy28e" >Rent Now</a>
               </div>
@@ -42,7 +42,7 @@ function Rent() {
             <br/>
 
             <div>
-              <h2>4-5 HOURS 170 USD</h2>
+              <h2>5 HOURS 175 USD</h2>
               <br/>
               <a  target="_blanck" className="greenButton" href="https://buy.stripe.com/3cseXLgCyaozfBK9AF" >Rent Now</a>
             
