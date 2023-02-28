@@ -1,5 +1,5 @@
-import React, { ChangeEvent, FormEvent, useRef, useState } from "react";
-import "./ContactForm.css";
+// import React, { ChangeEvent, FormEvent, useRef, useState } from "react";
+import './ContactForm.css'
 // import axios from "axios";
 // import ReCAPTCHA from 'react-google-recaptcha';
 
@@ -14,16 +14,16 @@ import "./ContactForm.css";
 //   text: string;
 // };
 function ContactForm() {
-  const formId = "Qem7Hhep";
-  const formSparkUrl = `https://submit-form.com/${formId}`;
-  const recaptchaKey = '';
+  const formId = 'Qem7Hhep'
+  // const formSparkUrl = `https://submit-form.com/${formId}`;
+  // const recaptchaKey = '';
   // const recaptchaRef = useRef<any>();
 
-  const initialFormState = {
-    email: "",
-    name: "",
-    message: "",
-  };
+  // const initialFormState = {
+  //   email: "",
+  //   name: "",
+  //   message: "",
+  // };
 
   // const [formState, setFormState] = useState<FormState>(initialFormState);
   // const [submitting, setSubmitting] = useState<boolean>(false);
@@ -77,8 +77,6 @@ function ContactForm() {
 
   return (
     <div className="h-full flex justify-center flex-col">
-   
-
       <div className=" w-2/3 m-auto p-8 shadow-lg">
         <h1 className="text-4xl font-bold flex items-center">
           <span>
@@ -91,30 +89,23 @@ function ContactForm() {
               <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
             </svg> */}
           </span>
-          <br/>
-          <br/>
-          <br/>
+          <br />
+          <br />
+          <br />
           <span>Contact us</span>
-          <br/>
-      
-          <br/>
-          <h2>
-        +54 9 351 459 9369 
-        </h2>
-        <br/>
-        <h2>
-        +1 702 326 2703
-        </h2>
-        <h2>
-          {/* Camila */}
-        </h2>
-        <br/>
-          <br/>
-          <br/>
-          <br/>
+          <br />
 
+          <br />
+          <h2>+54 9 351 459 9369</h2>
+          <br />
+          <h2>+1 702 326 2703</h2>
+          <h2>{/* Camila */}</h2>
+          <br />
+          <br />
+          <br />
+          <br />
         </h1>
-        
+
         {/* {message && (
           <div className={`my-4 text-white w-full p-4 ${message.class}`}>
             {message.text}
@@ -151,13 +142,13 @@ function ContactForm() {
             ></textarea>
           </div> */}
 
-          {/* <ReCAPTCHA
+        {/* <ReCAPTCHA
             ref={recaptchaRef}
             sitekey={recaptchaKey}
             onChange={updateRecaptchaToken}
           /> */}
 
-          {/* <button
+        {/* <button
             disabled={submitting}
             className="mt-4 my-2 bg-blue-700 text-white w-full p-2 hover:bg-blue-900 transition-colors duration-200"
           >
@@ -166,7 +157,7 @@ function ContactForm() {
         {/* </form> */}
       </div>
     </div>
-  );
+  )
 }
 
-export default ContactForm;
+export default ContactForm
