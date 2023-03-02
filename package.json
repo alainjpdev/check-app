@@ -2,8 +2,7 @@
   "name": "check-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://alainjpdev.github.io/check-app",
-
+  "homepage": "https://moketulum.com",
   "dependencies": {
     "'": "file:mui/icons-material/KeyboardArrowLeft'",
     "@emailjs/browser": "^3.7.0",
